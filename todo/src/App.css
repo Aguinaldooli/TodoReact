@@ -1,91 +1,119 @@
+/* Importa a fonte "Poppins" do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+/* Estilos globais para elementos HTML */
 * {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif; /* Define a fonte padrão para todos os elementos */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Estilos para o corpo da página */
 body {
-  background: #8758ff;
+  background: #8758ff; /* Define o plano de fundo com uma cor roxa */
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* Centraliza horizontalmente o conteúdo */
+  align-items: center; /* Centraliza verticalmente o conteúdo */
 }
 
+/* Estilos para o elemento com a classe "App" */
 .App {
-  text-align: center;
+  text-align: center; /* Centraliza o texto horizontalmente */
 }
 
+/* Estilos para cabeçalho H1 */
 h1 {
-  color: #fff;
-  margin-bottom: 0.5rem;
-  font-size: 1.75rem;
+  color: #fff; /* Define a cor do texto como branco */
+  margin-bottom: 0.5rem; /* Adiciona margem inferior para espaçamento */
+  font-size: 1.75rem; /* Define o tamanho da fonte */
 }
 
+/* Estilos para o elemento com a classe "TodoWrapper" */
 .TodoWrapper {
-  background: #1A1A40;
-  margin-top: 5rem;
-  padding: 2rem;
-  border-radius: 5px;
+  background: #1A1A40; /* Define o plano de fundo com uma cor escura */
+  margin-top: 5rem; /* Adiciona margem superior */
+  padding: 2rem; /* Adiciona preenchimento interno */
+  border-radius: 5px; /* Arredonda as bordas do elemento */
 }
 
+/* Estilos para o formulário de adicionar tarefas */
 .TodoForm {
-  width: 100%;
-  margin-bottom: 1rem;
+  width: 100%; /* Define a largura como 100% do elemento pai */
+  margin-bottom: 1rem; /* Adiciona margem inferior */
 }
 
+/* Estilos para a caixa de entrada de texto */
 .todo-input {
-  outline: none;
-  background: none;
-  border: 1px solid #8758ff;
-  padding: 0.5rem 1rem;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  width: 300px;
-  color: #fff;
+  outline: none; /* Remove o contorno padrão do elemento */
+  background: none; /* Remove o plano de fundo */
+  border: 1px solid #8758ff; /* Adiciona uma borda com cor roxa */
+  padding: 0.5rem 1rem; /* Adiciona preenchimento interno */
+  margin-top: 1rem; /* Adiciona margem superior */
+  margin-bottom: 2rem; /* Adiciona margem inferior */
+  width: 300px; /* Define uma largura fixa */
+  color: #fff; /* Define a cor do texto como branco */
 }
 
+/* Estilos para o texto de espaço reservado da caixa de entrada */
 .todo-input::placeholder {
-  color: #ffffff4d;
+  color: #ffffff4d; /* Define a cor do texto de espaço reservado */
 }
 
+/* Estilos para os botões de adicionar e editar tarefa */
 .todo-btn {
-  background: #8758ff;
-  color: #fff;
-  border: none;
-  padding: 0.55rem;
-  cursor: pointer;
+  background: #8758ff; /* Define o plano de fundo com cor roxa */
+  color: #fff; /* Define a cor do texto como branco */
+  border: none; /* Remove a borda */
+  padding: 0.55rem; /* Adiciona preenchimento interno */
+  cursor: pointer; /* Muda o cursor para a mão ao passar o mouse */
 }
 
+/* Estilos para as tarefas */
 .Todo {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #8758ff;
-  color: #fff;
-  padding: 0.75rem 1rem;
-  border-radius: 5px;
-  margin-bottom: 1rem;
+  justify-content: space-between; /* Alinha os elementos ao espaço entre eles */
+  align-items: center; /* Centraliza verticalmente os elementos */
+  background: #8758ff; /* Define o plano de fundo com cor roxa */
+  color: #fff; /* Define a cor do texto como branco */
+  padding: 0.75rem 1rem; /* Adiciona preenchimento interno */
+  border-radius: 5px; /* Arredonda as bordas do elemento */
+  margin-bottom: 1rem; /* Adiciona margem inferior */
+  transition: background 0.3s; /* Adicione uma transição suave para a mudança de cor de fundo */
 }
 
+/* Efeito de hover para as tarefas */
+.Todo:hover {
+  background: linear-gradient(to right, #8758ff, #6540d6, #8758ff); /* Adicione um gradiente ao fundo com maior destaque */
+}
 .fa-trash {
-  margin-left: 0.75rem;
+  margin-left: 0.75rem; /* Adiciona margem à esquerda do ícone */
 }
 
+/* Estilos para tarefas incompletas */
 .incompleted {
-  color: #fff;
-  cursor: pointer;
+  color: #fff; /* Define a cor do texto como branco */
+  cursor: pointer; /* Muda o cursor para a mão ao passar o mouse */
 }
 
+/* Estilos para tarefas completas */
 .completed {
-  color: #c5aeff;
-  text-decoration: line-through;
-  cursor: pointer;
+  color: #c5aeff; /* Define a cor do texto como roxo claro */
+  text-decoration: line-through; /* Adiciona uma linha no texto para indicar que está completo */
+  cursor: pointer; /* Muda o cursor para a mão ao passar o mouse */
 }
 
-.edit-icon,
-.delete-icon {
-  cursor: pointer;
+/* Estilizando os botões no hover */
+.todo-btn:hover {
+  background: #6540d6; /* Altera a cor de fundo ao passar o mouse */
+}
+
+/* Efeito de hover para o ícone de exclusão */
+.fa-trash:hover {
+  color: #d40000; /* Altera a cor do ícone ao passar o mouse */
+}
+
+/* Efeito de hover para o ícone de edição */
+.edit-icon:hover {
+  color: #009900; /* Altera a cor do ícone de edição ao passar o mouse */
 }
